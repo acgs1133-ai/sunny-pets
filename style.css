@@ -626,6 +626,10 @@ a,button{touch-action:manipulation}
   .sp-container{padding:0 20px}
   .sp-header-inner{padding:0 20px;height:66px}
   .sp-logo{font-size:21px}
+  /* WhatsApp is already one tap away via the floating button and the
+     mobile menu's CTA — a third entry point squeezed into the header
+     just crowds it, so drop it here. */
+  .sp-cta-header{display:none}
 
   /* generous, thumb-friendly tap targets everywhere */
   .sp-navlink,.sp-mobile-link{min-height:44px;display:flex;align-items:center}
@@ -718,9 +722,6 @@ a,button{touch-action:manipulation}
 
 /* ---- Small phones: single-column grids for readability ---- */
 @media(max-width:420px){
-  .sp-header-inner{gap:12px}
-  .sp-cta-header{width:44px;height:44px;padding:0;border-radius:50%;gap:0}
-  .sp-cta-header .sp-cta-label{display:none}
   .sp-hero-title{font-size:32px}
   .sp-hero-img{max-width:250px;height:250px}
   .sp-cta-final-title{font-size:30px}
